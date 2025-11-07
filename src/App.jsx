@@ -3,13 +3,14 @@ import './App.css'
 
 import { Home } from "./pages";
 
-import { NavigationBar } from './components';
+import { NavigationBar, Hero } from './components';
 
 function App() {
 
   return (
     <>
       <NavigationBar />
+      <Hero />
       <Home />
     </>
   )

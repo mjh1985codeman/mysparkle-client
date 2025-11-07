@@ -1,3 +1,4 @@
 import NavigationBar from "./NavigationBar";
+import Hero from "./Hero";
 
-export {NavigationBar};
+export {NavigationBar, Hero};

@@ -4,9 +4,69 @@
 
 /* Navigation Stylings  */
 .nav-custom {
+  min-height: 8vh;
   margin: 5px;
+  border: #555 solid 2px;
 }
 
-.nav-item-container {
-  margin-left: 40px;
+
+
+/* Hero Stylings */
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text image";
+  gap: 2rem;
+  align-items: safe;
+  padding: 0rem 8rem;
+  /* centers items vertically within its own height */
+}
+
+.hero-text {
+  margin-top: 80px;
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-top: 100px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.hero-image {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.hero-logo {
+  width: fit-content;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "image";
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-logo {
+    max-width: 250px;
+    margin-top: 1.5rem;
+  }
 }
